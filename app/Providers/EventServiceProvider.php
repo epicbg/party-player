@@ -15,10 +15,10 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\EnterPlaylist' => [
-            'App\Listeners\PlaylistExists',
-            'App\Listeners\SubscribeToPlaylist'
-        ]
+        'App\Events\EnterPlaylist' => [],
+        'App\Events\AddSong' => [],
+        'App\Events\RemoveSong' => [],
+        'App\Events\SongChanged' => []
     ];
 
     /**

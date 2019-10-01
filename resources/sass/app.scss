@@ -1,1 +1,66 @@
-//
+
+
+// 3rd party
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.youtube-result {
+    margin-top: 15px;
+}
+.playlist {
+    background-color: white;
+}
+
+.player {
+    background: black;
+    position: fixed;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+
+
+    .actions {
+        float:right;
+        width:40%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .title {
+        float:left;
+        width:60%;
+    }
+
+    i {
+        cursor: pointer;
+    }
+}
+
+#app {
+    height: 100%;
+
+}
+
+.inplay {
+    animation-duration: 2000ms;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+ }
+ @keyframes blink {
+    from {
+       opacity: 1;
+    }
+    to {
+       opacity: 0;
+    }
+  }
+
+
+

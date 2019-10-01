@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/{any}', function () {
     return view('welcome');
+})->where('any', '.*');
+
+
+Route::group(['prefix' => 'playlist'], function(){
+    Route::post('search', 'PlaylistController@search')->name('search');
+    Route::post('/song/add', 'PlaylistController@addSong')->name('add.song');
 });
